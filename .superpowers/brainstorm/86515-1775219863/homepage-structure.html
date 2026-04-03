@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>IMAGENN.AI — Homepage Structure</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #0a0b14; font-family: system-ui, -apple-system, sans-serif; color: #e2e8f0; padding: 32px 24px; }
+
+  h1 { font-family: Georgia, serif; font-size: 22px; font-weight: 700; color: #f8fafc; margin-bottom: 6px; }
+  .sub { color: #64748b; font-size: 13px; margin-bottom: 32px; }
+
+  .flow { display: flex; flex-direction: column; gap: 8px; max-width: 720px; margin: 0 auto; }
+
+  .section-block {
+    border-radius: 10px;
+    padding: 16px 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border: 1px solid rgba(255,255,255,0.06);
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .section-block:hover { border-color: rgba(99,102,241,0.3); background: rgba(99,102,241,0.04); }
+
+  .num {
+    width: 28px; height: 28px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0; margin-top: 1px;
+  }
+
+  .section-info { flex: 1; }
+  .section-name { font-size: 13px; font-weight: 700; color: #f1f5f9; margin-bottom: 4px; }
+  .section-desc { font-size: 11px; color: #64748b; line-height: 1.5; }
+  .section-tag { display: inline-block; font-size: 9px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 2px 8px; border-radius: 4px; margin-left: 8px; vertical-align: middle; }
+
+  .tag-cro { background: rgba(34,197,94,0.15); color: #4ade80; }
+  .tag-brand { background: rgba(139,92,246,0.15); color: #a78bfa; }
+  .tag-trust { background: rgba(56,189,248,0.15); color: #38bdf8; }
+  .tag-new { background: rgba(251,191,36,0.15); color: #fbbf24; }
+
+  /* color bands per section type */
+  .hero-s { background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(14,165,233,0.06) 100%); }
+  .trust-s { background: rgba(56,189,248,0.04); }
+  .problem-s { background: rgba(239,68,68,0.04); }
+  .services-s { background: rgba(99,102,241,0.06); }
+  .solutions-s { background: rgba(16,185,129,0.04); }
+  .why-s { background: rgba(139,92,246,0.05); }
+  .process-s { background: rgba(99,102,241,0.04); }
+  .speaking-s { background: rgba(251,191,36,0.05); }
+  .waitlist-s { background: rgba(99,102,241,0.08); }
+  .futureproof-s { background: rgba(139,92,246,0.06); }
+  .insights-s { background: rgba(56,189,248,0.04); }
+  .cta-s { background: linear-gradient(135deg, rgba(99,102,241,0.12) 0%, rgba(14,165,233,0.06) 100%); }
+
+  .arrow { color: #1e293b; font-size: 18px; text-align: center; line-height: 1; margin: -2px 0; }
+
+  .legend { display: flex; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+  .legend-item { display: flex; align-items: center; gap: 6px; font-size: 11px; color: #64748b; }
+  .legend-dot { width: 8px; height: 8px; border-radius: 50%; }
+
+  .nav-preview {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.06);
+    border-radius: 10px;
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 24px;
+    max-width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-logo { font-family: Georgia, serif; font-size: 14px; font-weight: 700; letter-spacing: 1px; background: linear-gradient(90deg, #818cf8, #22d3ee); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  .nav-links { display: flex; gap: 16px; }
+  .nav-link { font-size: 11px; color: #64748b; }
+  .nav-cta { background: linear-gradient(135deg, #6366f1, #4f46e5); color: #fff; font-size: 10px; font-weight: 700; padding: 6px 14px; border-radius: 6px; }
+
+  .pages-section { max-width: 720px; margin: 40px auto 0; }
+  .pages-title { font-family: Georgia, serif; font-size: 16px; color: #f8fafc; margin-bottom: 16px; }
+  .pages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .page-card { background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.06); border-radius: 8px; padding: 14px; }
+  .page-card-name { font-size: 12px; font-weight: 700; color: #c7d2fe; margin-bottom: 4px; }
+  .page-card-desc { font-size: 10px; color: #475569; line-height: 1.5; }
+  .page-route { font-size: 9px; color: #334155; font-family: monospace; margin-top: 6px; }
+</style>
+</head>
+<body>
+
+<div style="max-width:720px;margin:0 auto;">
+  <h1>IMAGENN.AI — Homepage Section Architecture</h1>
+  <p class="sub">Approach A: SPA Immersive Homepage. 12 sections, scroll-driven narrative flow.</p>
+
+  <div class="legend">
+    <div class="legend-item"><div class="legend-dot" style="background:#4ade80"></div>Conversion / CTA</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#38bdf8"></div>Trust / Credibility</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#a78bfa"></div>Brand / Vision</div>
+    <div class="legend-item"><div class="legend-dot" style="background:#fbbf24"></div>New Addition</div>
+  </div>
+
+  <!-- Nav preview -->
+  <div class="nav-preview">
+    <div class="nav-logo">IMAGENN.AI</div>
+    <div class="nav-links">
+      <div class="nav-link">Services</div>
+      <div class="nav-link">Solutions</div>
+      <div class="nav-link">About</div>
+      <div class="nav-link">Speaking</div>
+      <div class="nav-link">Insights</div>
+    </div>
+    <div class="nav-cta">Book a Call</div>
+  </div>
+
+  <div class="flow">
+
+    <div class="section-block hero-s">
+      <div class="num" style="background:rgba(99,102,241,0.2);color:#818cf8;">01</div>
+      <div class="section-info">
+        <div class="section-name">Hero <span class="section-tag tag-cro">CRO Priority</span></div>
+        <div class="section-desc">Editorial serif headline: "Modernize How Your Business Thinks." Subheadline. Dual CTA: Book a Call / Contact Us (single form with toggle). Trust proof line. Indigo→cyan gradient orbs. Subtle animated background grid.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block trust-s">
+      <div class="num" style="background:rgba(56,189,248,0.15);color:#38bdf8;">02</div>
+      <div class="section-info">
+        <div class="section-name">Credibility Strip <span class="section-tag tag-trust">Trust</span></div>
+        <div class="section-desc">Who we help (Founders, CEOs, COOs, Ops Leaders). 4 capability highlights with icons. Transformation stat placeholders. Horizontal scrolling on mobile.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block problem-s">
+      <div class="num" style="background:rgba(239,68,68,0.1);color:#f87171;">03</div>
+      <div class="section-info">
+        <div class="section-name">The Problem</div>
+        <div class="section-desc">Real pain points: legacy systems, disconnected tools, slow decisions, manual operations, innovation paralysis. Bold headline + 6 pain-point cards with icons. Creates urgency and resonance.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block services-s">
+      <div class="num" style="background:rgba(99,102,241,0.2);color:#818cf8;">04</div>
+      <div class="section-info">
+        <div class="section-name">What We Do — Services</div>
+        <div class="section-desc">3 lead cards: AI Strategy & Opportunity Mapping · AI-Powered Decision Support · Change Enablement & AI Adoption. Secondary row: remaining services (Workflow Automation, Operational Transformation, etc.). Premium hover states.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block solutions-s">
+      <div class="num" style="background:rgba(16,185,129,0.1);color:#34d399;">05</div>
+      <div class="section-info">
+        <div class="section-name">Solutions / Use Cases</div>
+        <div class="section-desc">Organized by business function: Operations, Sales, CX, Leadership, Team Productivity. Tabbed or filterable card grid showing real business applications. Outcome-first language.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block why-s">
+      <div class="num" style="background:rgba(139,92,246,0.15);color:#a78bfa;">06</div>
+      <div class="section-info">
+        <div class="section-name">Why IMAGENN.AI <span class="section-tag tag-trust">Trust</span></div>
+        <div class="section-desc">5–6 differentiators vs. generic AI agencies and consultants. Execution-focused, business-first, bridges innovation to implementation. Split layout: headline left, differentiation grid right.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block process-s">
+      <div class="num" style="background:rgba(99,102,241,0.15);color:#818cf8;">07</div>
+      <div class="section-info">
+        <div class="section-name">How We Work — Process</div>
+        <div class="section-desc">4-step framework: Discover → Design → Build → Scale. Each step has a short description and key outcome. Horizontal timeline on desktop, vertical on mobile.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block speaking-s">
+      <div class="num" style="background:rgba(251,191,36,0.15);color:#fbbf24;">08</div>
+      <div class="section-info">
+        <div class="section-name">Speaking & Panels — Book Rob <span class="section-tag tag-new">New</span></div>
+        <div class="section-desc">Rob's speaking section. Headline + short bio intro. Topics/expertise tags (AI Innovation, Digital Transformation, Future of Work, etc.). Past engagements placeholder. CTA: "Invite Rob to Speak" → booking form.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block waitlist-s">
+      <div class="num" style="background:rgba(99,102,241,0.2);color:#c7d2fe;">09</div>
+      <div class="section-info">
+        <div class="section-name">Product Waitlist — Coming Soon <span class="section-tag tag-new">New</span> <span class="section-tag tag-cro">CRO Priority</span></div>
+        <div class="section-desc">Dedicated section for IMAGENN.AI's incoming SaaS product pipeline. Teaser copy about what's coming. Email capture form. Indigo gradient treatment to create urgency and excitement. "Be first to access" framing.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block futureproof-s">
+      <div class="num" style="background:rgba(139,92,246,0.15);color:#a78bfa;">10</div>
+      <div class="section-info">
+        <div class="section-name">Future-Proof Your Organization <span class="section-tag tag-brand">Brand</span></div>
+        <div class="section-desc">Premium brand statement section. Bold serif headline about transformation and resilience. Supporting copy. Visual treatment with layered gradients. Mid-page CTA moment.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block insights-s">
+      <div class="num" style="background:rgba(56,189,248,0.1);color:#38bdf8;">11</div>
+      <div class="section-info">
+        <div class="section-name">Insights Preview</div>
+        <div class="section-desc">3 featured article cards. Topic tags. Editorial layout. "View all insights →" link. Topics: AI readiness, automation ROI, modernizing operations, legacy infrastructure thinking.</div>
+      </div>
+    </div>
+
+    <div class="arrow">↓</div>
+
+    <div class="section-block cta-s">
+      <div class="num" style="background:rgba(99,102,241,0.2);color:#818cf8;">12</div>
+      <div class="section-info">
+        <div class="section-name">Final CTA — Book a Strategy Call <span class="section-tag tag-cro">CRO Priority</span></div>
+        <div class="section-desc">Strong closing statement. Combined Book a Call / Contact Us form with toggle. Full-width section with gradient backdrop. No dead end — every visitor exits through a conversion opportunity.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Inner pages -->
+  <div class="pages-section">
+    <div class="pages-title">Inner Pages</div>
+    <div class="pages-grid">
+      <div class="page-card">
+        <div class="page-card-name">Services</div>
+        <div class="page-card-desc">Full depth per service. Pain points, outcomes, deliverables, who it's for.</div>
+        <div class="page-route">/services</div>
+      </div>
+      <div class="page-card">
+        <div class="page-card-name">Solutions</div>
+        <div class="page-card-desc">Use cases by business function. Filterable. Outcome-first.</div>
+        <div class="page-route">/solutions</div>
+      </div>
+      <div class="page-card">
+        <div class="page-card-name">About</div>
+        <div class="page-card-desc">Mission, vision, approach, what makes IMAGENN.AI different.</div>
+        <div class="page-route">/about</div>
+      </div>
+      <div class="page-card">
+        <div class="page-card-name">Speaking</div>
+        <div class="page-card-desc">Rob's full speaking profile, topics, past engagements, booking form.</div>
+        <div class="page-route">/speaking</div>
+      </div>
+      <div class="page-card">
+        <div class="page-card-name">Insights</div>
+        <div class="page-card-desc">Thought leadership hub. Article grid, tags, newsletter CTA.</div>
+        <div class="page-route">/insights</div>
+      </div>
+      <div class="page-card">
+        <div class="page-card-name">Contact</div>
+        <div class="page-card-desc">Premium contact page. Book a Call / Contact Us toggle form.</div>
+        <div class="page-route">/contact</div>
+      </div>
+      <div class="page-card" style="border-color:rgba(99,102,241,0.3);">
+        <div class="page-card-name" style="color:#818cf8;">Waitlist</div>
+        <div class="page-card-desc">Dedicated SaaS product pipeline page. Full waitlist experience.</div>
+        <div class="page-route">/waitlist</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

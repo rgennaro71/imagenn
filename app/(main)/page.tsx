@@ -1,4 +1,14 @@
 // app/(main)/page.tsx
+import { HeroSection } from "@/components/sections/HeroSection";
+import { CredibilityStrip } from "@/components/sections/CredibilityStrip";
+import { ProblemSection } from "@/components/sections/ProblemSection";
+
 export default function HomePage() {
-  return <div className="min-h-screen pt-24 text-slate-primary text-center">Homepage coming soon</div>;
+  return (
+    <>
+      <HeroSection />
+      <CredibilityStrip />
+      <ProblemSection />
+    </>
+  );
 }

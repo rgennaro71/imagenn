@@ -1,4 +1,6 @@
 // components/sections/ServicesSection.tsx
+"use client";
+
 import Link from "next/link";
 import { Brain, BarChart3, Users, Zap, Settings, BookOpen, Headphones, Cpu } from "lucide-react";
 import { SectionHeader } from "@/components/shared/SectionHeader";

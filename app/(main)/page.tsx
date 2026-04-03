@@ -5,6 +5,12 @@ import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
 import { WhyUsSection } from "@/components/sections/WhyUsSection";
+import { ProcessSection } from "@/components/sections/ProcessSection";
+import { SpeakingSection } from "@/components/sections/SpeakingSection";
+import { WaitlistSection } from "@/components/sections/WaitlistSection";
+import { FutureProofSection } from "@/components/sections/FutureProofSection";
+import { InsightsPreviewSection } from "@/components/sections/InsightsPreviewSection";
+import { FinalCTASection } from "@/components/sections/FinalCTASection";
 
 export default function HomePage() {
   return (
@@ -15,6 +21,12 @@ export default function HomePage() {
       <ServicesSection />
       <SolutionsSection />
       <WhyUsSection />
+      <ProcessSection />
+      <SpeakingSection />
+      <WaitlistSection />
+      <FutureProofSection />
+      <InsightsPreviewSection />
+      <FinalCTASection />
     </>
   );
 }

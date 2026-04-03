@@ -40,8 +40,8 @@ export function SolutionsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-          {useCases[activeCategory].map((uc, i) => (
-            <UseCaseCard key={i} {...uc} />
+          {useCases[activeCategory].map((uc) => (
+            <UseCaseCard key={uc.problem} {...uc} />
           ))}
         </div>
 

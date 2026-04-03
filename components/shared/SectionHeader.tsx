@@ -27,7 +27,7 @@ export function SectionHeader({
         {heading}
       </h2>
       {subheading && (
-        <p className="text-lg text-slate-secondary max-w-2xl mx-auto leading-relaxed">
+        <p className={cn("text-lg text-slate-secondary leading-relaxed", align === "center" && "max-w-2xl mx-auto")}>
           {subheading}
         </p>
       )}

@@ -56,7 +56,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+    <html lang="en" className={`${playfair.variable} ${dmSans.variable}`} suppressHydrationWarning>
       <head>
         {/* eslint-disable-next-line react/no-danger */}
         <script
@@ -64,7 +64,7 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: jsonLdString }}
         />
       </head>
-      <body className="bg-obsidian text-slate-primary font-sans antialiased">
+      <body className="bg-obsidian text-slate-primary font-sans antialiased" suppressHydrationWarning>
         {children}
         <Analytics />
       </body>

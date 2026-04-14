@@ -1,4 +1,4 @@
-// app/(main)/page.tsx
+// app/(main)/coming-soon/page.tsx
 import type { Metadata } from "next";
 import { ComingSoonClient } from "@/components/sections/ComingSoonClient";
 
@@ -8,6 +8,6 @@ export const metadata: Metadata = {
     "AI & Digital Innovation. We're building the systems that bridge AI potential and real organizational change. Join the waitlist.",
 };
 
-export default function HomePage() {
+export default function ComingSoonPage() {
   return <ComingSoonClient />;
 }

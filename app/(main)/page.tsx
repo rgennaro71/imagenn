@@ -1,6 +1,27 @@
 // app/(main)/page.tsx
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "IMAGENN.AI — AI Innovation & Operational Automation",
+  description:
+    "IMAGENN.AI helps organizations modernize operations, eliminate bottlenecks, and build AI-powered foundations for scalable growth. Strategy, automation, and execution — from roadmap to results.",
+  openGraph: {
+    title: "IMAGENN.AI — AI Innovation & Operational Automation",
+    description:
+      "We bridge the gap between AI potential and organizational reality. Real systems, real results — not slide decks.",
+    url: "https://imagenn.ai",
+    siteName: "IMAGENN.AI",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "IMAGENN.AI — AI Innovation & Operational Automation",
+    description:
+      "We bridge the gap between AI potential and organizational reality. Real systems, real results — not slide decks.",
+  },
+};
+
 import { HeroSection } from "@/components/sections/HeroSection";
-import { CredibilityStrip } from "@/components/sections/CredibilityStrip";
 import { ProblemSection } from "@/components/sections/ProblemSection";
 import { ServicesSection } from "@/components/sections/ServicesSection";
 import { SolutionsSection } from "@/components/sections/SolutionsSection";
@@ -16,7 +37,6 @@ export default function HomePage() {
   return (
     <>
       <HeroSection />
-      <CredibilityStrip />
       <ProblemSection />
       <ServicesSection />
       <SolutionsSection />

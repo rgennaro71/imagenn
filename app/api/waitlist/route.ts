@@ -10,12 +10,14 @@ const resend = new Resend(process.env.RESEND_API_KEY);
 const schema = z.object({
   firstName: z.string().min(1),
   email: z.string().email(),
+  company: z.string().optional(),
+  role: z.string().optional(),
 });
 
 export async function POST(req: NextRequest) {
   try {
     const body = await req.json();
-    const { firstName, email } = schema.parse(body);
+    const { firstName, email, company, role } = schema.parse(body);
 
     await resend.emails.send({
       from: `${siteConfig.name} <noreply@imagenn.ai>`,
@@ -28,7 +30,7 @@ export async function POST(req: NextRequest) {
       from: `${siteConfig.name} <noreply@imagenn.ai>`,
       to: siteConfig.adminEmail,
       subject: `New waitlist signup: ${firstName} (${email})`,
-      html: `<p><strong>Name:</strong> ${escHtml(firstName)}</p><p><strong>Email:</strong> ${escHtml(email)}</p>`,
+      html: `<p><strong>Name:</strong> ${escHtml(firstName)}</p><p><strong>Email:</strong> ${escHtml(email)}</p>${company ? `<p><strong>Company:</strong> ${escHtml(company)}</p>` : ""}${role ? `<p><strong>Role:</strong> ${escHtml(role)}</p>` : ""}`,
     });
 
     return NextResponse.json({ success: true });

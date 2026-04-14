@@ -1,4 +1,5 @@
 // components/shared/CTASection.tsx
+"use client";
 import Link from "next/link";
 import { buttonVariants } from "@/components/ui/button";
 import { GlowOrb } from "./GlowOrb";

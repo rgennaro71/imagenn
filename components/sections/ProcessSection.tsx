@@ -1,4 +1,7 @@
 // components/sections/ProcessSection.tsx
+"use client";
+
+import { motion } from "framer-motion";
 import { SectionHeader } from "@/components/shared/SectionHeader";
 import { ProcessStep } from "@/components/shared/ProcessStep";
 
@@ -31,18 +34,34 @@ const steps = [
 
 export function ProcessSection() {
   return (
-    <section className="section-padding bg-obsidian">
-      <div className="content-width">
+    <section
+      className="section-padding"
+      style={{ background: "#0D1120" }}
+    >
+      {/* Top boundary */}
+      <div
+        className="absolute left-0 right-0 h-px pointer-events-none"
+        style={{ background: "rgba(255,255,255,0.04)" }}
+        aria-hidden="true"
+      />
+
+      <div className="content-width relative">
         <SectionHeader
           eyebrow="How We Work"
           heading="From Strategy to Scale — All of It."
           subheading="A four-step framework designed to take you from insight to implementation without losing momentum."
           align="center"
+          theme="dark"
         />
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-6">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-10 lg:gap-8">
           {steps.map((step, i) => (
-            <ProcessStep key={step.number} {...step} isLast={i === steps.length - 1} />
+            <ProcessStep
+              key={step.number}
+              {...step}
+              isLast={i === steps.length - 1}
+              index={i}
+            />
           ))}
         </div>
       </div>

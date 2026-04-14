@@ -26,6 +26,30 @@ export const metadata: Metadata = {
   },
 };
 
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: siteConfig.name,
+  url: siteConfig.url,
+  description: siteConfig.description,
+  logo: `${siteConfig.url}/og-image.png`,
+  sameAs: [siteConfig.social.linkedin, siteConfig.social.twitter],
+  contactPoint: {
+    "@type": "ContactPoint",
+    contactType: "customer service",
+    email: siteConfig.contactEmail,
+  },
+  founder: {
+    "@type": "Person",
+    name: siteConfig.founder.fullName,
+    jobTitle: siteConfig.founder.title,
+  },
+};
+
+// JSON-LD content is a static config object — no user input, XSS risk is nil.
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+const jsonLdString = JSON.stringify(jsonLd);
+
 export default function RootLayout({
   children,
 }: {
@@ -33,6 +57,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={`${playfair.variable} ${dmSans.variable}`}>
+      <head>
+        {/* eslint-disable-next-line react/no-danger */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: jsonLdString }}
+        />
+      </head>
       <body className="bg-obsidian text-slate-primary font-sans antialiased">
         {children}
         <Analytics />

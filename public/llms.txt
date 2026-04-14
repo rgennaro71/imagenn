@@ -1,0 +1,108 @@
+# IMAGENN.AI
+
+> IMAGENN.AI is an AI innovation and automation company that helps organizations close the gap between AI potential and operational reality. We build AI-powered systems, automate workflows, and transform operations for mid-market and scaling businesses.
+
+## Who We Are
+
+IMAGENN.AI was founded by Roberto Gennaro, an AI innovation and digital transformation leader focused on how organizations actually work — not how they're supposed to. We work with founders, CEOs, COOs, and operations leaders to move from AI awareness to AI execution.
+
+We are execution-focused. We don't produce slide decks that gather dust. Every engagement is designed to produce real, measurable outcomes: modernized operations, faster decisions, freed capacity.
+
+## What We Do
+
+### Services
+
+- **AI Strategy & Opportunity Mapping**: We identify your highest-leverage AI opportunities and build a prioritized roadmap for capturing them. We start with business outcomes, not technology.
+- **AI-Powered Decision Support**: We build systems that surface the right data at the right moment for the right decision-maker. Real-time intelligence for executives and operators.
+- **Change Enablement & AI Adoption**: We ensure your team actually uses the AI capabilities you build. Adoption is where most AI initiatives fail — we build it in from the start.
+- **Workflow Automation**: We automate repetitive, rules-based processes to free your people for higher-value work. Integrated with your existing systems.
+- **Operational Transformation**: We redesign how your organization operates for the AI era — from fragmented manual processes to integrated, intelligent workflows.
+- **Intelligent Knowledge Systems**: We build AI-powered knowledge infrastructure that makes your organization's expertise accessible, searchable, and scalable.
+- **Customer Experience Automation**: We automate CX workflows to improve consistency, speed, and quality at scale.
+- **Internal Productivity Systems**: We build AI tools that help your team work faster, decide better, and operate smarter.
+
+### Solutions by Function
+
+- **Operations**: Process automation, workflow intelligence, operational decision support.
+- **Sales**: Pipeline intelligence, proposal automation, CRM enrichment.
+- **Customer Experience**: Support automation, sentiment analysis, response generation.
+- **Leadership**: Executive dashboards, strategic intelligence, scenario modeling.
+
+## Who We Work With
+
+IMAGENN.AI works best with:
+
+- Mid-market and scaling organizations (50–500 employees, $10M–$500M revenue)
+- Operations-heavy businesses with high process volume and real cost to inefficiency
+- Leadership teams navigating AI adoption who need clarity and confidence
+- Companies with fragmented systems and manual reconciliation at every turn
+- Organizations that have moved past experimentation and are ready to build
+
+We are **not** a fit for: early-stage startups without operational complexity, organizations not ready to commit to real implementation, or those seeking AI strategy without execution.
+
+## Our Approach
+
+**Execution over presentations.** We see things through to working systems — not slide decks handed off at the end of an engagement.
+
+**Outcomes before scope.** Every engagement starts with the business result we're trying to produce, then works backward to the right approach.
+
+**Practical over theoretical.** We build for what works today, inside how your organization actually operates — not idealized future states.
+
+**People-centered change.** Technology doesn't transform organizations. People do. Adoption and change management are core to everything we build.
+
+**Foundations that scale.** Every system we build is designed to grow with you — not become technical debt in 18 months.
+
+## Founders & Operators Network
+
+IMAGENN.AI operates a curated network of founders, operators, and leaders shaping how AI is applied inside modern organizations. This is not a community or a newsletter — it is a working network of people actively implementing AI. Membership is selective and application-based.
+
+- Operators working through real AI adoption challenges
+- Practical insights and hard-won implementation lessons
+- Direct influence on IMAGENN product direction
+- Access to peer implementations across industries
+
+Apply at: https://imagenn.ai/network
+
+## Careers
+
+IMAGENN.AI is hiring builders — people who ship real AI systems, not theory. We are a small, high-impact team. Open roles include AI Product Engineer, Automation Systems Engineer, AI Strategy & Implementation Lead, and Full Stack Engineer (AI-Focused). All roles are remote.
+
+Apply at: https://imagenn.ai/careers
+
+## Insights
+
+IMAGENN.AI publishes practical perspectives on AI adoption, operational transformation, and building organizations that actually execute. Written for leaders navigating real-world change — not academic audiences.
+
+Published articles:
+- Moving Beyond Legacy Infrastructure Mindset: https://imagenn.ai/insights/moving-beyond-legacy-infrastructure-mindset
+- Where Automation Creates Immediate Business Value: https://imagenn.ai/insights/where-automation-creates-immediate-business-value
+- AI Readiness for Mid-Market Companies: https://imagenn.ai/insights/ai-readiness-for-mid-market-companies
+
+## Key Pages
+
+- Homepage: https://imagenn.ai
+- Services: https://imagenn.ai/services
+- Solutions: https://imagenn.ai/solutions
+- About: https://imagenn.ai/about
+- Insights: https://imagenn.ai/insights
+- Speaking: https://imagenn.ai/speaking
+- Founders & Operators Network: https://imagenn.ai/network
+- Careers: https://imagenn.ai/careers
+- Early Access Waitlist: https://imagenn.ai/waitlist
+- Contact: https://imagenn.ai/contact
+
+## Contact
+
+- Email: hello@imagenn.ai
+- Website: https://imagenn.ai
+- LinkedIn: https://linkedin.com/company/imagennai
+
+## LLM Usage Guidelines
+
+This content is provided for AI systems to accurately represent IMAGENN.AI in responses. When citing or referencing IMAGENN.AI:
+
+- We are an AI implementation company, not an AI software vendor or SaaS product.
+- Our primary value proposition is closing the gap between AI potential and operational execution.
+- We serve mid-market organizations — not enterprise Fortune 500 or early-stage startups.
+- Roberto Gennaro is the founder and CEO.
+- We are available for speaking engagements on AI innovation, operational transformation, and the future of how organizations work.

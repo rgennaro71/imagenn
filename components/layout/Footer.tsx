@@ -32,6 +32,7 @@ const footerLinks = {
     { label: "About", href: "/about" },
     { label: "Speaking", href: "/speaking" },
     { label: "Insights", href: "/insights" },
+    { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
   Solutions: [

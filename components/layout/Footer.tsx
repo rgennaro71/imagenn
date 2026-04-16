@@ -35,6 +35,10 @@ const footerLinks = {
     { label: "Careers", href: "/careers" },
     { label: "Contact", href: "/contact" },
   ],
+  Resources: [
+    { label: "AI Readiness Playbook", href: "/ai-readiness-playbook" },
+    { label: "Join Waitlist", href: "/waitlist" },
+  ],
   Solutions: [
     { label: "Operations", href: "/solutions#operations" },
     { label: "Sales", href: "/solutions#sales" },
@@ -48,7 +52,7 @@ export function Footer() {
   return (
     <footer className="bg-obsidian border-t border-white/5">
       <div className="content-width px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div>
             <span
               className="font-serif font-bold text-lg tracking-wide block mb-4"

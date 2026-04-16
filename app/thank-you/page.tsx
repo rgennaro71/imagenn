@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import { Navbar } from '@/components/layout/Navbar'
 import ThankYouClient from './ThankYouClient'
 
 export const metadata: Metadata = {
@@ -7,5 +8,10 @@ export const metadata: Metadata = {
 }
 
 export default function ThankYouPage() {
-  return <ThankYouClient />
+  return (
+    <>
+      <Navbar />
+      <ThankYouClient />
+    </>
+  )
 }

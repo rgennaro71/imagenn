@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { Menu, X, Sparkles } from "lucide-react";
+import { Menu, X, Sparkles, BookOpen } from "lucide-react";
 import { siteConfig } from "@/lib/site-config";
 import { cn } from "@/lib/utils";
 
@@ -87,6 +87,32 @@ export function Navbar() {
 
         {/* Desktop actions */}
         <div className="hidden md:flex items-center gap-3">
+          {/* Playbook link */}
+          <Link
+            href="/ai-readiness-playbook"
+            className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg text-xs font-semibold transition-all duration-200"
+            style={isScrolled ? {
+              border: "1px solid rgba(99,102,241,0.35)",
+              color: "#6366f1",
+              background: "rgba(99,102,241,0.06)",
+            } : {
+              border: "1px solid rgba(99,102,241,0.3)",
+              color: "#818cf8",
+              background: "rgba(99,102,241,0.08)",
+            }}
+            onMouseEnter={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = "rgba(99,102,241,0.15)";
+              (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-1px)";
+            }}
+            onMouseLeave={(e) => {
+              (e.currentTarget as HTMLAnchorElement).style.background = isScrolled ? "rgba(99,102,241,0.06)" : "rgba(99,102,241,0.08)";
+              (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
+            }}
+          >
+            <BookOpen size={11} />
+            Free Playbook
+          </Link>
+
           {/* Waitlist pill */}
           <a
             href="/waitlist"
@@ -150,6 +176,14 @@ export function Navbar() {
               {item.label}
             </Link>
           ))}
+          <Link
+            href="/ai-readiness-playbook"
+            className="w-full h-11 rounded-lg text-sm font-semibold flex items-center justify-center gap-2 transition-all duration-200"
+            style={{ border: "1px solid rgba(99,102,241,0.4)", color: "#6366f1", background: "rgba(99,102,241,0.06)" }}
+          >
+            <BookOpen size={13} />
+            Free AI Playbook
+          </Link>
           <a
             href="/waitlist"
             className="w-full h-11 rounded-lg text-sm font-bold text-white flex items-center justify-center gap-2 transition-all duration-200"

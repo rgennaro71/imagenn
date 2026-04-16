@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useCallback } from 'react'
 import { useRouter } from 'next/navigation'
-import Link from 'next/link'
 import styles from './playbook.module.css'
 
 const STATS = [
@@ -78,12 +77,6 @@ export default function PlaybookPageClient() {
 
   return (
     <div className={styles.page}>
-      {/* Top Bar */}
-      <header className={styles.topBar}>
-        <Link href="/" className={styles.logo}>IMAGENN.AI</Link>
-        <span className={styles.resourcePill}>FREE RESOURCE</span>
-      </header>
-
       {/* Hero */}
       <section className={styles.hero}>
         <p className={styles.eyebrow}>2026 AI Readiness Playbook</p>
@@ -141,14 +134,6 @@ export default function PlaybookPageClient() {
           Get the Free Playbook →
         </button>
       </section>
-
-      {/* Footer */}
-      <footer className={styles.footer}>
-        <p className={styles.footerText}>
-          © 2026 IMAGENN.AI ·{' '}
-          <Link href="/privacy" className={styles.footerLink}>Privacy</Link>
-        </p>
-      </footer>
 
       {/* Modal */}
       {isOpen && (

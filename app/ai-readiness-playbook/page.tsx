@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import { Navbar } from '@/components/layout/Navbar'
+import { Footer } from '@/components/layout/Footer'
 import PlaybookPageClient from './PlaybookPageClient'
 
 export const metadata: Metadata = {
@@ -51,7 +53,9 @@ export default function AIReadinessPlaybookPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: jsonLdString }}
       />
+      <Navbar />
       <PlaybookPageClient />
+      <Footer />
     </>
   )
 }

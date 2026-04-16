@@ -1,14 +1,9 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { z } from 'zod'
-import { Resend } from 'resend'
-import { render } from '@react-email/components'
-import { supabaseAdmin } from '@/lib/supabase/admin'
 import { checkRateLimit } from '@/lib/rate-limit'
-import { escHtml } from '@/lib/utils'
-import AiPlaybookWelcome from '@/emails/ai-playbook-welcome'
 import { siteConfig } from '@/lib/site-config'
 
-const resend = new Resend(process.env.RESEND_API_KEY)
+const LIVE_BACKEND = process.env.SUBSCRIBE_BACKEND_LIVE === 'true'
 
 const schema = z.object({
   firstName: z.string().min(1),
@@ -49,6 +44,28 @@ export async function POST(req: NextRequest) {
   }
 
   const { firstName, email, source } = parsed.data
+
+  // --- STUB MODE (default until SUBSCRIBE_BACKEND_LIVE=true) ---
+  if (!LIVE_BACKEND) {
+    console.log('[SUBSCRIBE STUB]', {
+      firstName,
+      email,
+      source,
+      timestamp: new Date().toISOString(),
+    })
+    return NextResponse.json({ ok: true, stubbed: true })
+  }
+
+  // --- LIVE MODE ---
+  const { getSupabaseAdmin } = await import('@/lib/supabase/admin')
+  const { Resend } = await import('resend')
+  const { render } = await import('@react-email/components')
+  const { escHtml } = await import('@/lib/utils')
+  const { default: AiPlaybookWelcome } = await import('@/emails/ai-playbook-welcome')
+
+  const supabaseAdmin = getSupabaseAdmin()
+  const resend = new Resend(process.env.RESEND_API_KEY)
+
   const userAgent = req.headers.get('user-agent') ?? undefined
 
   let isDuplicate = false

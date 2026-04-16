@@ -1,0 +1,545 @@
+/* =============================================
+   PLAYBOOK LEAD MAGNET — CSS MODULES
+   Uses existing CSS vars: --font-playfair, --font-dm-sans
+   ============================================= */
+
+/* ---------- Page Shell ---------- */
+.page {
+  background-color: #0a0e27;
+  color: #f1f5f9;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+  min-height: 100vh;
+}
+
+/* ---------- Top Bar ---------- */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.logo {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 0.02em;
+}
+
+.resourcePill {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e46212;
+  border: 1px solid #e46212;
+  border-radius: 100px;
+  padding: 4px 12px;
+}
+
+/* ---------- Hero ---------- */
+.hero {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 80px 40px 64px;
+  text-align: center;
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #e46212;
+  margin: 0 0 20px;
+}
+
+.h1 {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  font-weight: 700;
+  line-height: 1.15;
+  color: #ffffff;
+  margin: 0 0 24px;
+}
+
+.accent {
+  color: #e46212;
+  font-style: italic;
+}
+
+.subHeadline {
+  font-size: 1.1rem;
+  line-height: 1.65;
+  color: #94a3b8;
+  margin: 0 auto 36px;
+  max-width: 580px;
+}
+
+.metaPills {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.metaPill {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #cbd5e1;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 100px;
+  padding: 6px 16px;
+}
+
+.ctaBtn {
+  display: inline-block;
+  background-color: #e46212;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 16px 36px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  font-family: inherit;
+}
+
+.ctaBtn:hover {
+  background-color: #c9530d;
+  transform: translateY(-1px);
+}
+
+/* ---------- Stats Section ---------- */
+.statsSection {
+  background: rgba(255, 255, 255, 0.03);
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 56px 40px;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.statCard {
+  text-align: center;
+}
+
+.statNumber {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: #e46212;
+  line-height: 1;
+  margin: 0 0 8px;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  line-height: 1.4;
+  margin: 0 0 4px;
+}
+
+.statSource {
+  font-size: 0.7rem;
+  color: #475569;
+  margin: 0;
+}
+
+/* ---------- Chapters Section ---------- */
+.chaptersSection {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 72px 40px;
+}
+
+.sectionLabel {
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #e46212;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+.sectionTitle {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  font-weight: 700;
+  color: #ffffff;
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+.chaptersGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.chapterCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  align-items: flex-start;
+  transition: border-color 0.2s ease;
+}
+
+.chapterCard:hover {
+  border-color: rgba(228, 98, 18, 0.3);
+}
+
+.chapterNum {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #e46212;
+  line-height: 1;
+  flex-shrink: 0;
+  width: 32px;
+}
+
+.chapterTitle {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #f1f5f9;
+  margin: 0 0 4px;
+}
+
+.chapterDesc {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* ---------- CTA Band ---------- */
+.ctaBand {
+  background: linear-gradient(135deg, #1a1f3e 0%, #0a0e27 100%);
+  border-top: 1px solid rgba(228, 98, 18, 0.2);
+  border-bottom: 1px solid rgba(228, 98, 18, 0.2);
+  padding: 72px 40px;
+  text-align: center;
+}
+
+.ctaBandTitle {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 32px;
+}
+
+/* ---------- Footer ---------- */
+.footer {
+  padding: 24px 40px;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.footerText {
+  font-size: 0.8rem;
+  color: #475569;
+  margin: 0;
+}
+
+.footerLink {
+  color: #475569;
+  text-decoration: underline;
+}
+
+/* ---------- Modal ---------- */
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  padding: 20px;
+}
+
+.modalCard {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px;
+  width: 100%;
+  max-width: 460px;
+  position: relative;
+}
+
+.modalClose {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #9ca3af;
+  font-size: 1.25rem;
+  line-height: 1;
+  padding: 4px 8px;
+}
+
+.modalClose:hover {
+  color: #374151;
+}
+
+.modalTitle {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0a0e27;
+  margin: 0 0 8px;
+}
+
+.modalSub {
+  font-size: 0.9rem;
+  color: #6b7280;
+  margin: 0 0 28px;
+  line-height: 1.5;
+}
+
+.formGroup {
+  margin-bottom: 16px;
+}
+
+.label {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #374151;
+  margin-bottom: 6px;
+}
+
+.input {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1.5px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #111827;
+  background: #ffffff;
+  box-sizing: border-box;
+  transition: border-color 0.15s ease;
+  font-family: inherit;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #e46212;
+}
+
+.input:disabled {
+  background: #f9fafb;
+  color: #9ca3af;
+}
+
+.consentRow {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #e46212;
+  cursor: pointer;
+}
+
+.consentText {
+  font-size: 0.8rem;
+  color: #6b7280;
+  line-height: 1.45;
+  margin: 0;
+}
+
+.submitBtn {
+  width: 100%;
+  background-color: #e46212;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: inherit;
+}
+
+.submitBtn:hover:not(:disabled) {
+  background-color: #c9530d;
+}
+
+.submitBtn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.formError {
+  color: #ef4444;
+  font-size: 0.85rem;
+  margin-top: 12px;
+  text-align: center;
+}
+
+/* ---------- Thank-You Page ---------- */
+.thankYouPage {
+  background-color: #0a0e27;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  font-family: var(--font-dm-sans), system-ui, sans-serif;
+}
+
+.thankYouCard {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 56px 48px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+}
+
+.checkIcon {
+  width: 64px;
+  height: 64px;
+  background: rgba(228, 98, 18, 0.12);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  font-size: 1.75rem;
+  color: #e46212;
+}
+
+.thankYouTitle {
+  font-family: var(--font-playfair), Georgia, serif;
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+.thankYouSub {
+  font-size: 1rem;
+  color: #94a3b8;
+  margin: 0 0 36px;
+  line-height: 1.6;
+}
+
+.downloadBtn {
+  display: inline-block;
+  background-color: #e46212;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 1rem;
+  padding: 14px 28px;
+  border-radius: 8px;
+  text-decoration: none;
+  margin-bottom: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.downloadBtn:hover {
+  background-color: #c9530d;
+}
+
+.assessmentBtn {
+  display: block;
+  color: #e46212;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px;
+}
+
+.assessmentBtn:hover {
+  text-decoration: underline;
+}
+
+.thankYouFooter {
+  margin-top: 40px;
+}
+
+.thankYouBack {
+  font-size: 0.82rem;
+  color: #475569;
+  text-decoration: none;
+}
+
+.thankYouBack:hover {
+  color: #94a3b8;
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 768px) {
+  .topBar {
+    padding: 16px 20px;
+  }
+
+  .hero {
+    padding: 56px 20px 48px;
+  }
+
+  .statsSection {
+    padding: 48px 20px;
+  }
+
+  .statsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .chaptersSection {
+    padding: 56px 20px;
+  }
+
+  .chaptersGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .ctaBand {
+    padding: 56px 20px;
+  }
+
+  .thankYouCard {
+    padding: 40px 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .statsGrid {
+    grid-template-columns: 1fr;
+  }
+}

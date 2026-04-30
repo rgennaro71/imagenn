@@ -44,17 +44,11 @@ export function Navbar() {
         {/* Logo */}
         <Link href="/" className="flex items-center">
           <Image
-            src="/logo.png"
+            src={isScrolled ? "/logo-dark.svg" : "/Logo-light.svg"}
             alt="IMAGENN"
             width={180}
             height={52}
-            className="h-7 w-auto transition-all duration-300"
-            style={isScrolled ? {
-              filter: "invert(1)",
-              mixBlendMode: "multiply",
-            } : {
-              mixBlendMode: "screen",
-            }}
+            className="h-7 w-auto transition-opacity duration-300"
             priority
           />
         </Link>

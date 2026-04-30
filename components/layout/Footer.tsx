@@ -1,5 +1,6 @@
 // components/layout/Footer.tsx
 import Link from "next/link";
+import Image from "next/image";
 import { siteConfig } from "@/lib/site-config";
 
 function LinkedinIcon({ size = 18 }: { size?: number }) {
@@ -54,16 +55,15 @@ export function Footer() {
       <div className="content-width px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12 mb-12">
           <div>
-            <span
-              className="font-serif font-bold text-lg tracking-wide block mb-4"
-              style={{
-                background: "linear-gradient(90deg, #818cf8, #22d3ee)",
-                WebkitBackgroundClip: "text",
-                WebkitTextFillColor: "transparent",
-              }}
-            >
-              {siteConfig.name}
-            </span>
+            <Link href="/" className="inline-block mb-4">
+              <Image
+                src="/Logo-light.svg"
+                alt={siteConfig.name}
+                width={160}
+                height={46}
+                className="h-7 w-auto"
+              />
+            </Link>
             <p className="text-sm text-slate-muted leading-relaxed mb-6 max-w-xs">
               AI innovation and automation for organizations ready to modernize how they work and grow.
             </p>

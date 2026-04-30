@@ -144,7 +144,7 @@ function Hero({
         {/* Wordmark */}
         <motion.div variants={item} className="mb-14 flex justify-center sm:mb-16">
           <Image
-            src="/logo.png"
+            src="/Logo-light.svg"
             alt="IMAGENN.AI"
             width={180}
             height={52}
